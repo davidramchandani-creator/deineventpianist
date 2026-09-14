@@ -1,0 +1,826 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="David Ramchandani, Pianist für Hochzeiten, Dinners und Anlässe in Winterthur, Zürich und Umgebung. Live am Flügel, ohne Notenblatt, klare Preise."><style>body{margin:0}[hidden]{display:none!important}</style>
+<title>David Ramchandani, Pianist</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap">
+<style>
+  /* Monochrom: Schwarz, Weiss, Grau. Ein Akzent: Bordeaux. */
+  :root{
+    --white:#FFFFFF; --paper:#F4F4F2; --paper2:#EAEAE7; --line:#E3E3E0; --line2:#CFCFCB;
+    --black:#0A0A0A; --ink:#161616; --grey:#6E6E6B; --grey2:#9C9C98;
+    --accent:#7A1E2E; --accent2:#5E1622; --accent-soft:rgba(122,30,46,.08);
+    --on-black:#F4F4F2; --on-black-2:#A8A8A4; --black-line:rgba(255,255,255,.14);
+    --display:"Instrument Serif", "Times New Roman", Georgia, serif;
+    --body:"Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --max:1200px;
+  }
+  html{color-scheme:light;scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{animation:none!important;transition:none!important}}
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  body{margin:0;background:var(--white);color:var(--ink);font-family:var(--body);font-size:15.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;color:var(--black);line-height:.98;letter-spacing:-.015em}
+  h1{font-size:clamp(56px,9vw,132px)}
+  h2{font-size:clamp(40px,5.6vw,76px)}
+  h3{font-size:30px;line-height:1.05}
+  em{font-style:italic}
+  p{margin:0}
+  .wrap{max-width:var(--max);margin-inline:auto;padding-inline:28px}
+  .label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);font-weight:500}
+  .label.acc{color:var(--accent)}
+  .muted{color:var(--grey)}
+  section{padding-block:112px}
+  section.paper{background:var(--paper)}
+  section.black{background:var(--black);color:var(--on-black)}
+  section.black h2,section.black h3{color:var(--on-black)}
+  .sec-head{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end;margin-bottom:64px}
+  .sec-head .label{display:block;margin-bottom:22px}
+  .sec-head p{font-size:17px;color:var(--grey);line-height:1.65;max-width:46ch}
+  section.black .sec-head p{color:var(--on-black-2)}
+  @media (max-width:800px){section{padding-block:72px}.sec-head{grid-template-columns:1fr;gap:18px;margin-bottom:40px}}
+
+  /* nav */
+  .topbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:64px;max-width:var(--max);margin-inline:auto;padding-inline:28px}
+  .brand{font-weight:600;font-size:14px;text-decoration:none;color:var(--black);letter-spacing:-.01em}
+  .brand span{color:var(--grey);font-weight:400}
+  nav ul{list-style:none;margin:0;padding:0;display:flex;gap:28px;font-size:13.5px;font-weight:500}
+  nav ul a{text-decoration:none;color:var(--grey);transition:color .2s}
+  nav ul a:hover{color:var(--black)}
+  @media (max-width:900px){nav ul{display:none}}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:48px;padding:0 24px;border-radius:999px;font-family:var(--body);font-weight:500;font-size:14px;text-decoration:none;border:1px solid var(--black);color:var(--black);background:transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+  .btn:hover{background:var(--black);color:var(--white)}
+  .btn.solid{background:var(--black);color:var(--white)}
+  .btn.solid:hover{background:var(--accent);border-color:var(--accent)}
+  .btn.inv{border-color:var(--on-black);color:var(--on-black)}
+  .btn.inv:hover{background:var(--on-black);color:var(--black)}
+  .btn.inv.solid{background:var(--on-black);color:var(--black)}
+  .btn.inv.solid:hover{background:var(--white);border-color:var(--white)}
+  .btn.sm{height:38px;padding:0 18px;font-size:13px}
+  .btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,summary:focus-visible,.key:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+  /* hero */
+  .hero{padding-block:88px 0}
+  .hero .label{display:block;margin-bottom:34px}
+  .hero h1{max-width:12ch}
+  .hero h1 em{color:var(--accent)}
+  .hero-row{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-top:48px;padding-bottom:64px}
+  .hero .lead{font-size:19px;color:var(--grey);max-width:44ch;line-height:1.6}
+  .hero .ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+  @media (max-width:800px){.hero-row{grid-template-columns:1fr;gap:28px;padding-bottom:40px}.hero .ctas{justify-content:flex-start}}
+
+  /* stage: black block with keyboard + programme */
+  .stage{padding-block:0}
+  .stage-grid{display:grid;grid-template-columns:1.35fr .65fr;background:var(--black);color:var(--on-black)}
+  .stage .kb-side{padding:56px 56px 48px;border-right:1px solid var(--black-line)}
+  .kb-hint{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-black-2);margin-top:16px;display:flex;justify-content:space-between}
+  .keyboard{position:relative;height:160px;display:flex;background:#000;padding:8px 8px 0;border:1px solid var(--black-line)}
+  .key{position:relative;flex:1;border:0;padding:0;cursor:pointer;transition:transform .08s,background .08s}
+  .key.white{background:linear-gradient(#FFFFFF,#EDEDEA);border-right:1px solid #B5B5B0;border-radius:0 0 2px 2px;height:100%}
+  .key.white:last-child{border-right:0}
+  .key.white:hover,.key.white.down{background:linear-gradient(#EDEDEA,#DCDCD8);transform:translateY(2px)}
+  .key.black{position:absolute;top:8px;width:2.9%;height:60%;background:linear-gradient(#2A2A2A,#0A0A0A);border-radius:0 0 2px 2px;box-shadow:0 3px 0 #000;z-index:2}
+  .key.black:hover,.key.black.down{background:linear-gradient(#3A3A3A,#151515);transform:translateY(2px)}
+  .programme{padding:56px 48px}
+  .programme .label{display:block;margin-bottom:26px;color:var(--on-black-2)}
+  .programme dl{margin:0;display:grid;gap:16px}
+  .programme .item{display:grid;gap:4px;padding-bottom:16px;border-bottom:1px solid var(--black-line)}
+  .programme .item:last-child{border-bottom:0;padding-bottom:0}
+  .programme dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-black-2)}
+  .programme dd{margin:0;font-family:var(--display);font-size:26px;line-height:1.1}
+  .programme .note{margin-top:26px;font-size:13px;color:var(--on-black-2);line-height:1.6}
+  @media (max-width:860px){.stage-grid{grid-template-columns:1fr}.stage .kb-side{border-right:0;border-bottom:1px solid var(--black-line);padding:28px}.programme{padding:32px 28px}.keyboard{height:110px}}
+
+  /* hero facts strip */
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+  .facts div{padding:28px 0;border-right:1px solid var(--line);padding-left:24px}
+  .facts div:first-child{padding-left:0}
+  .facts div:last-child{border-right:0}
+  .facts b{font-family:var(--display);font-size:44px;font-weight:400;display:block;line-height:1;margin-bottom:8px;letter-spacing:-.02em}
+  .facts span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+  @media (max-width:800px){.facts{grid-template-columns:1fr 1fr}.facts div{padding-left:0;border-right:0;border-bottom:1px solid var(--line)}}
+
+  /* occasions */
+  .occasions{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line)}
+  .occ{background:var(--paper);padding:36px 28px 40px;min-height:260px;display:flex;flex-direction:column}
+  .occ .num{font-size:11px;letter-spacing:.14em;color:var(--grey2);margin-bottom:auto;font-weight:500}
+  .occ h3{font-size:34px;margin-top:40px}
+  .occ p{font-size:14px;color:var(--grey);margin-top:10px;line-height:1.6}
+  @media (max-width:900px){.occasions{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.occasions{grid-template-columns:1fr}.occ{min-height:0}.occ h3{margin-top:18px}}
+
+  /* packages */
+  .packages{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);align-items:stretch}
+  .pkg{background:var(--white);padding:36px 30px 32px;display:flex;flex-direction:column;gap:20px;position:relative}
+  .pkg .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey2);font-weight:500;min-height:16px}
+  .pkg h3{font-size:34px}
+  .price{font-family:var(--display);font-size:60px;line-height:1;color:var(--black);font-variant-numeric:tabular-nums;letter-spacing:-.02em;padding-bottom:24px;border-bottom:1px solid var(--line)}
+  .price small{font-family:var(--body);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);display:block;margin-bottom:12px}
+  .pkg ul{list-style:none;padding:0;margin:0;display:grid;gap:11px;font-size:14px;color:var(--grey);line-height:1.55}
+  .pkg li{padding-left:18px;position:relative}
+  .pkg li::before{content:"";position:absolute;left:0;top:11px;width:8px;height:1px;background:var(--black)}
+  .pkg .btn{margin-top:auto;align-self:flex-start}
+  .pkg.featured{background:var(--black);color:var(--on-black)}
+  .pkg.featured h3,.pkg.featured .price{color:var(--on-black)}
+  .pkg.featured .tag{color:var(--accent);color:#D7A0AA}
+  .pkg.featured .price{border-bottom-color:var(--black-line)}
+  .pkg.featured .price small{color:var(--on-black-2)}
+  .pkg.featured ul{color:var(--on-black-2)}
+  .pkg.featured li::before{background:var(--on-black)}
+  @media (max-width:1000px){.packages{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.packages{grid-template-columns:1fr}}
+
+  /* configurator */
+  .config{display:grid;grid-template-columns:1.1fr .9fr;gap:1px;background:var(--line);align-items:stretch}
+  .config > *{min-width:0}
+  legend{max-width:100%}
+  legend span{display:inline-block}
+  .form-card{display:grid;gap:32px;background:var(--white);padding:44px;align-content:start}
+  fieldset{border:0;padding:0;margin:0;display:grid;gap:14px}
+  legend{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--black);font-weight:500;padding:0;margin-bottom:6px}
+  legend span{text-transform:none;letter-spacing:0;font-weight:400;color:var(--grey);font-size:12.5px;margin-left:10px}
+  .choice{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{position:relative}
+  .chip input{position:absolute;inset:0;opacity:0;cursor:pointer}
+  .chip label{display:inline-flex;align-items:center;gap:10px;padding:11px 16px;border:1px solid var(--line2);border-radius:999px;font-size:13.5px;cursor:pointer;color:var(--grey);background:var(--white);transition:border-color .2s,background .2s,color .2s;user-select:none}
+  .chip label b{font-weight:500;color:var(--black)}
+  .chip label .p{font-size:12px;color:var(--grey2);font-variant-numeric:tabular-nums}
+  .chip input:checked + label{border-color:var(--black);background:var(--black);color:var(--on-black-2)}
+  .chip input:checked + label b{color:var(--white)}
+  .chip input:checked + label .p{color:var(--on-black-2)}
+  .chip input:focus-visible + label{outline:2px solid var(--accent);outline-offset:3px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .field{display:grid;gap:8px}
+  .field label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--black);font-weight:500}
+  .field label .opt{text-transform:none;letter-spacing:0;font-weight:400;color:var(--grey)}
+  .field .help{font-size:12.5px;color:var(--grey);line-height:1.55}
+  input[type=text],input[type=email],input[type=tel],input[type=date],select,textarea{width:100%;background:var(--white);border:1px solid var(--line2);color:var(--black);border-radius:6px;padding:13px 14px;font:inherit;font-size:15px}
+  select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--grey) 50%),linear-gradient(135deg,var(--grey) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
+  textarea{min-height:140px;resize:vertical}
+  .stepper{display:flex;align-items:center;border:1px solid var(--line2);border-radius:999px;overflow:hidden;width:max-content;background:var(--white)}
+  .stepper button{background:transparent;border:0;color:var(--black);width:46px;height:44px;font-size:20px;cursor:pointer;font-family:var(--body)}
+  .stepper button:hover{background:var(--paper)}
+  .stepper output{min-width:64px;text-align:center;font-weight:500;font-variant-numeric:tabular-nums;font-size:14px}
+
+  .summary{background:var(--black);color:var(--on-black);display:flex;flex-direction:column}
+  .summary .head{padding:44px 40px 26px;border-bottom:1px solid var(--black-line)}
+  .summary .head .label{display:block;margin-bottom:14px;color:var(--on-black-2)}
+  .summary .total{font-family:var(--display);font-size:84px;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+  .summary .total small{font-family:var(--body);font-size:12px;letter-spacing:.14em;color:var(--on-black-2);margin-right:12px;vertical-align:middle}
+  .summary .lines{padding:12px 40px 14px;display:grid}
+  .summary .line{display:grid;grid-template-columns:1fr auto;gap:12px;padding:11px 0;border-bottom:1px solid var(--black-line);font-size:13.5px}
+  .summary .line:last-child{border-bottom:0}
+  .summary .line .n{color:var(--on-black-2)}
+  .summary .line .v{font-variant-numeric:tabular-nums;font-weight:500}
+  .summary .line.discount .v,.summary .line.discount .n{color:#9FD3AE}
+  .summary .line.express .v,.summary .line.express .n{color:#E0A2AC}
+  .summary .line.empty .n{font-style:italic}
+  .summary .foot{padding:26px 40px 40px;display:grid;gap:16px;margin-top:auto;border-top:1px solid var(--black-line)}
+  .summary .fine{font-size:12px;color:var(--on-black-2);line-height:1.6}
+  @media (max-width:880px){.config{grid-template-columns:1fr}.form-card{padding:24px}.summary .head,.summary .lines,.summary .foot{padding-inline:24px}.summary .total{font-size:64px}}
+
+  /* repertoire */
+  .rep{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--black-line)}
+  .rep > div{padding:8px 36px 8px 0}
+  .rep > div + div{padding-left:36px}
+  .rep h3{font-family:var(--body);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-black-2);margin-bottom:18px;font-weight:500}
+  .rep ul{list-style:none;padding:0;margin:0}
+  .rep li{padding:12px 0;border-bottom:1px solid var(--black-line);font-family:var(--display);font-size:26px;display:flex;justify-content:space-between;gap:12px;align-items:baseline;line-height:1.1}
+  .rep li:last-child{border-bottom:0}
+  .rep li span{font-family:var(--body);color:var(--on-black-2);font-size:11.5px;letter-spacing:.06em;white-space:nowrap}
+  .rep-note{margin-top:48px;font-family:var(--display);font-size:30px;color:var(--on-black);max-width:34ch;line-height:1.2}
+  .rep-note em{color:#D7A0AA}
+  @media (max-width:800px){.rep{grid-template-columns:1fr}.rep > div{padding:24px 0}.rep > div + div{padding-left:0}}
+
+  /* referenzen */
+  .refs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .ref{margin:0}
+  .ref .vid{position:relative;aspect-ratio:16/9;max-width:100%;background:#0A0A0A;display:grid;place-items:center;overflow:hidden}
+  .ref .vid iframe,.ref .vid video{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .ref .play{width:64px;height:64px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:transparent;color:#fff;cursor:pointer;display:grid;place-items:center;font-size:18px;transition:background .2s,border-color .2s}
+  .ref .play:hover{background:#fff;color:#0A0A0A;border-color:#fff}
+  .ref .vid .soon{position:absolute;left:18px;bottom:16px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-black-2)}
+  .ref figcaption{padding-top:16px;display:grid;gap:4px}
+  .ref figcaption b{font-family:var(--display);font-size:24px;font-weight:400;line-height:1.1}
+  .ref figcaption span{font-size:12.5px;color:var(--grey);letter-spacing:.04em}
+  .quote{margin:72px auto 0;max-width:38ch;text-align:center}
+  .quote p{font-family:var(--display);font-size:clamp(28px,3.4vw,42px);line-height:1.15;color:var(--black)}
+  .quote cite{display:block;margin-top:18px;font-style:normal;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+  @media (max-width:800px){.refs{grid-template-columns:1fr}}
+
+  /* process */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;counter-reset:step}
+  .step{border-top:1px solid var(--black);padding-top:22px}
+  .step::before{counter-increment:step;content:"0" counter(step);font-size:11px;letter-spacing:.14em;color:var(--accent);display:block;margin-bottom:22px;font-weight:500}
+  .step h3{font-size:30px;margin-bottom:12px}
+  .step p{font-size:14px;color:var(--grey);line-height:1.65}
+  @media (max-width:800px){.steps{grid-template-columns:1fr 1fr;gap:32px}}
+  @media (max-width:480px){.steps{grid-template-columns:1fr}}
+
+  /* about */
+  .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:center}
+  .portrait{aspect-ratio:4/5;max-width:440px;background:var(--paper2);display:grid;place-items:end start;padding:20px;color:var(--grey);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+  .about .txt{display:grid;gap:24px}
+  .about .txt p{max-width:54ch;color:var(--grey);font-size:17px;line-height:1.7}
+  .about .txt p strong{color:var(--black);font-weight:500}
+  .cross{border-top:1px solid var(--line);padding-top:22px;font-size:14px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;color:var(--grey)}
+  .cross a{color:var(--black);font-weight:500;text-decoration:none;white-space:nowrap;border-bottom:1px solid var(--black);padding-bottom:2px}
+  .cross a:hover{color:var(--accent);border-color:var(--accent)}
+  @media (max-width:800px){.about{grid-template-columns:1fr;gap:36px}.portrait{max-width:320px}}
+
+  /* faq */
+  .faq-grid{display:grid;grid-template-columns:1fr 2fr;gap:48px}
+  .faq{border-top:1px solid var(--line)}
+  details{border-bottom:1px solid var(--line)}
+  summary{cursor:pointer;padding:22px 0;font-family:var(--display);font-size:28px;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center;line-height:1.1}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--grey2);font-size:28px;line-height:1;font-family:var(--body);font-weight:300}
+  details[open] summary::after{content:"–"}
+  details p{padding-bottom:24px;color:var(--grey);font-size:15px;max-width:62ch;line-height:1.7}
+  @media (max-width:800px){.faq-grid{grid-template-columns:1fr;gap:24px}}
+
+  /* contact */
+  .contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px}
+  .contact .side p{color:var(--on-black-2);max-width:40ch;margin-top:20px;font-size:17px;line-height:1.7}
+  .contact .side .direct{margin-top:36px;display:grid;gap:10px;font-size:15px}
+  .contact .side .direct a{color:var(--on-black);text-decoration:none;font-weight:500;border-bottom:1px solid var(--black-line);width:max-content;padding-bottom:2px}
+  .contact form{display:grid;gap:18px;position:relative}
+  .contact form .field label{color:var(--on-black)}
+  .contact form .field label .opt{color:var(--on-black-2)}
+  .contact form input,.contact form textarea{background:transparent;border:1px solid var(--black-line);color:var(--on-black)}
+  .contact form input::placeholder,.contact form textarea::placeholder{color:#6F6F6C}
+  .thanks{display:none;border:1px solid var(--black-line);padding:30px}
+  .thanks h3{color:#9FD3AE;margin-bottom:8px}
+  .thanks p{color:var(--on-black-2)}
+  form.sent{display:none}
+  form.sent + .thanks{display:block}
+  @media (max-width:800px){.contact{grid-template-columns:1fr;gap:36px}}
+
+  footer{background:var(--black);color:var(--on-black-2);border-top:1px solid var(--black-line);padding-block:36px 44px;font-size:12.5px}
+  footer .inner{max-width:var(--max);margin-inline:auto;padding-inline:28px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+  footer a{color:var(--on-black);text-decoration:none;font-size:13px}
+  footer a:hover{color:#D7A0AA}
+  footer .links{display:flex;gap:22px;flex-wrap:wrap}
+  .proto{display:inline-block;border:1px solid var(--black-line);border-radius:999px;padding:2px 10px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;margin-left:10px}
+</style>
+
+<div class="topbar">
+<nav>
+  <a class="brand" href="#top">David Ramchandani <span>/ Pianist</span></a>
+  <ul>
+    <li><a href="#pakete">Pakete</a></li>
+    <li><a href="#konfigurator">Richtpreis</a></li>
+    <li><a href="#repertoire">Repertoire</a></li>
+    <li><a href="#referenzen">Referenzen</a></li>
+    <li><a href="#ueber">Über mich</a></li>
+    <li><a href="#faq">Fragen</a></li>
+  </ul>
+  <a class="btn solid sm" href="#anfrage">Anfragen</a>
+</nav>
+</div>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="label">Pianist für Hochzeiten, Dinners &amp; Anlässe · Winterthur, Zürich &amp; Umgebung</span>
+      <h1>Musik, die den <em>Moment</em> trägt.</h1>
+      <div class="hero-row">
+        <p class="lead">Live am Flügel, ohne Notenblatt. Von der ersten Träne beim Einzug bis zum letzten Glas beim Apéro: eure Lieder, mein Spiel, klare Preise.</p>
+        <div class="ctas">
+          <a class="btn solid" href="#konfigurator">Richtpreis berechnen</a>
+          <a class="btn" href="#pakete">Pakete</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stage">
+    <div class="stage-grid">
+      <div class="kb-side">
+        <div class="keyboard" id="keyboard" aria-label="Klaviertastatur, spielbar"></div>
+        <div class="kb-hint"><span>C3 bis B5</span><span>Tasten anklicken oder antippen</span></div>
+      </div>
+      <aside class="programme" aria-label="Programm einer Trauung">
+        <span class="label">Programm · Trauung, Beispiel</span>
+        <dl>
+          <div class="item"><dt>Einzug</dt><dd>A Thousand Years</dd></div>
+          <div class="item"><dt>Ringtausch</dt><dd>Can't Help Falling in Love</dd></div>
+          <div class="item"><dt>Unterschrift</dt><dd>River Flows in You</dd></div>
+          <div class="item"><dt>Auszug</dt><dd>Perfect</dd></div>
+        </dl>
+        <p class="note">Jedes Programm entsteht im Gespräch mit dem Paar. Ihr wählt aus dem Repertoire oder wünscht euch etwas Neues.</p>
+      </aside>
+    </div>
+    <div class="wrap">
+      <div class="facts">
+        <div><b>16</b><span>Jahre Klavier</span></div>
+        <div><b>0</b><span>Notenblätter</span></div>
+        <div><b>1</b><span>Programm pro Paar</span></div>
+        <div><b>48h</b><span>Antwort auf Anfragen</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="anlaesse">
+    <div class="wrap">
+    <div class="sec-head">
+      <div><span class="label">Anlässe</span><h2>Wo ich spiele</h2></div>
+      <p>Ich spiele auf dem Flügel oder Klavier vor Ort. Die meisten Locations haben eines, für alle anderen helfe ich bei der Miete über einen Klavierbauer.</p>
+    </div>
+    <div class="occasions">
+      <div class="occ"><span class="num">01</span><h3>Trauung</h3><p>Zivil, kirchlich oder frei. Einzug, Ringtausch, Auszug und alles dazwischen.</p></div>
+      <div class="occ"><span class="num">02</span><h3>Apéro</h3><p>Hintergrundmusik, die trägt, aber nie über die Gespräche hinweg spielt.</p></div>
+      <div class="occ"><span class="num">03</span><h3>Dinner</h3><p>Dezent und stimmungsvoll, von Jazz-Standards bis zu modernen Balladen.</p></div>
+      <div class="occ"><span class="num">04</span><h3>Firmenanlass</h3><p>Empfänge, Weihnachtsessen, Jubiläen. Verlässlich und ohne Aufhebens.</p></div>
+      <div class="occ"><span class="num">05</span><h3>Privatfeier</h3><p>Runder Geburtstag, Taufe, Verlobung. Auch mit einer kleinen Überraschung.</p></div>
+    </div>
+    </div>
+  </section>
+
+  <section id="pakete" class="paper">
+    <div class="wrap">
+    <div class="sec-head">
+      <div><span class="label">Pakete &amp; Preise</span><h2>Klar kalkuliert, <em>fair für beide.</em></h2></div>
+      <p>Richtpreise ab Winterthur, inklusive Vorgespräch, Vorbereitung und Einspielen vor Ort. Flügel oder Klavier vor Ort vorausgesetzt. Die Offerte folgt nach dem persönlichen Gespräch.</p>
+    </div>
+    <div class="packages">
+      <article class="pkg">
+        <span class="tag">Der Klassiker</span>
+        <h3>Trauung</h3>
+        <div class="price"><small>ab CHF</small>450</div>
+        <ul>
+          <li>Bis 60 Minuten vor Ort spielbereit</li>
+          <li>Einzug, Ringtausch, Unterschrift, Auszug</li>
+          <li>Alle Stücke aus dem Repertoire</li>
+          <li>1 neu einstudiertes Wunschlied inklusive, gemeldet bis 6 Wochen vorher</li>
+        </ul>
+        <button class="btn" data-preset="trauung">Konfigurieren</button>
+      </article>
+      <article class="pkg featured">
+        <span class="tag">Am häufigsten gebucht</span>
+        <h3>Trauung &amp; Apéro</h3>
+        <div class="price"><small>ab CHF</small>900</div>
+        <ul>
+          <li>Alles aus dem Paket Trauung</li>
+          <li>Plus 90 Minuten Apéro-Musik</li>
+          <li>Bis 60 Minuten Pause dazwischen inklusive</li>
+          <li>Kombi-Vorteil CHF 100 eingerechnet</li>
+        </ul>
+        <button class="btn inv solid" data-preset="trauung-apero">Konfigurieren</button>
+      </article>
+      <article class="pkg">
+        <span class="tag">Der ganze Tag</span>
+        <h3>Trauung, Apéro &amp; Dinner</h3>
+        <div class="price"><small>ab CHF</small>1500</div>
+        <ul>
+          <li>Trauung, 90 Minuten Apéro, 2 Stunden Dinner</li>
+          <li>Bis 6 Stunden vor Ort</li>
+          <li>2 neu einstudierte Wunschlieder inklusive</li>
+          <li>Kombi-Vorteil CHF 200 eingerechnet</li>
+        </ul>
+        <button class="btn" data-preset="ganzer-tag">Konfigurieren</button>
+      </article>
+      <article class="pkg">
+        <span class="tag">Firmen &amp; Private</span>
+        <h3>Dinner &amp; Anlässe</h3>
+        <div class="price"><small>ab CHF</small>550</div>
+        <ul>
+          <li>Apéro (90 Min.) ab 550, Dinner (2 Std.) ab 700</li>
+          <li>Verlängerung CHF 100 pro 30 Minuten</li>
+          <li>Repertoire nach Anlass: Jazz, Pop, Filmmusik</li>
+          <li>Auch regelmässig, z.B. monatlicher Piano-Abend</li>
+        </ul>
+        <button class="btn" data-preset="firma">Konfigurieren</button>
+      </article>
+    </div>
+    </div>
+  </section>
+
+  <section id="konfigurator">
+    <div class="wrap">
+    <div class="sec-head">
+      <div><span class="label">Konfigurator</span><h2>Richtpreis berechnen</h2></div>
+      <p>Stellt euren Anlass zusammen. Der Preis rechnet live mit, die Anfrage übernimmt eure Auswahl.</p>
+    </div>
+    <div class="config">
+      <div class="form-card">
+        <div class="field">
+          <label for="anlass">Anlass</label>
+          <select id="anlass">
+            <option value="hochzeit">Hochzeit</option>
+            <option value="firma">Firmenanlass</option>
+            <option value="privat">Privatfeier</option>
+            <option value="dinner">Dinner / Restaurant</option>
+          </select>
+        </div>
+
+        <fieldset id="bausteine">
+          <legend>Bausteine <span>Mehrere kombinierbar, ab dem zweiten je CHF 100 günstiger</span></legend>
+          <div class="choice">
+            <div class="chip" data-only="hochzeit"><input type="checkbox" id="m-trauung" value="450" checked><label for="m-trauung"><b>Trauung</b><span class="p">bis 60 Min. · 450</span></label></div>
+            <div class="chip"><input type="checkbox" id="m-apero" value="550"><label for="m-apero"><b>Apéro</b><span class="p">90 Min. · 550</span></label></div>
+            <div class="chip"><input type="checkbox" id="m-dinner" value="700"><label for="m-dinner"><b>Dinner</b><span class="p">2 Std. · 700</span></label></div>
+          </div>
+        </fieldset>
+
+        <div class="row" id="pause-row" hidden>
+          <div class="field">
+            <label for="pause-out">Pause zwischen den Bausteinen</label>
+            <div class="stepper" id="pause">
+              <button type="button" data-d="-1" aria-label="Weniger">−</button>
+              <output id="pause-out">60 Min.</output>
+              <button type="button" data-d="1" aria-label="Mehr">+</button>
+            </div>
+            <span class="help">z.B. für Fotos zwischen Trauung und Apéro. Bis 60 Minuten inklusive, danach CHF 80 pro Stunde.</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="ext-out">Verlängerung</label>
+            <div class="stepper" id="ext">
+              <button type="button" data-d="-1" aria-label="Weniger">−</button>
+              <output id="ext-out">0</output>
+              <button type="button" data-d="1" aria-label="Mehr">+</button>
+            </div>
+            <span class="help">Je 30 Minuten, CHF 100</span>
+          </div>
+          <div class="field">
+            <label for="songs-out">Neu einstudierte Wunschlieder</label>
+            <div class="stepper" id="songs">
+              <button type="button" data-d="-1" aria-label="Weniger">−</button>
+              <output id="songs-out">1</output>
+              <button type="button" data-d="1" aria-label="Mehr">+</button>
+            </div>
+            <span class="help" id="songs-help">Lieder aus dem Repertoire sind immer inklusive. Neue Stücke: 1 inklusive, dann CHF 90 pro Lied. Gemeldet bis 6 Wochen vor dem Anlass, danach Express-Zuschlag CHF 90 pro Lied.</span>
+          </div>
+        </div>
+
+        <fieldset>
+          <legend>Anfahrt ab Winterthur</legend>
+          <div class="choice">
+            <div class="chip"><input type="radio" name="zone" id="z-1" value="0" checked><label for="z-1"><b>Bis 30 km</b><span class="p">inklusive</span></label></div>
+            <div class="chip"><input type="radio" name="zone" id="z-2" value="80"><label for="z-2"><b>31 bis 60 km</b><span class="p">+ 80 pauschal</span></label></div>
+            <div class="chip"><input type="radio" name="zone" id="z-3" value="request"><label for="z-3"><b>Über 60 km</b><span class="p">auf Anfrage</span></label></div>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="datum">Datum des Anlasses <span class="opt">(optional, für die 6-Wochen-Regel)</span></label>
+          <input type="date" id="datum">
+        </div>
+      </div>
+
+      <aside class="summary" aria-live="polite">
+        <div class="head">
+          <span class="label">Richtpreis</span>
+          <div class="total"><small>CHF</small><span id="total">450</span></div>
+        </div>
+        <div class="lines" id="lines"></div>
+        <div class="foot">
+          <a class="btn inv solid" href="#anfrage" id="to-request">Mit dieser Auswahl anfragen</a>
+          <p class="fine">Richtpreis, keine Offerte. Enthalten: Vorgespräch, Vorbereitung, Anfahrt bis 30 km, Einspielen vor Ort, die Zeit vor Ort und bis 60 Minuten Pause zwischen den Bausteinen. Wunschlieder bis 6 Wochen vor dem Anlass, danach Express-Zuschlag. Reservation mit 30 % Anzahlung, Rest 14 Tage vor dem Anlass.</p>
+        </div>
+      </aside>
+    </div>
+    </div>
+  </section>
+
+  <section id="repertoire" class="black">
+    <div class="wrap">
+    <div class="sec-head">
+      <div><span class="label" style="color:var(--on-black-2)">Repertoire</span><h2>Eure Lieder, mein Spiel.</h2></div>
+      <p>Ein Auszug. Alles ohne Notenblatt gespielt, in eigenen Arrangements. Die Liste wächst mit jeder Hochzeit.</p>
+    </div>
+    <div class="rep">
+      <div>
+        <h3>Für den Einzug</h3>
+        <ul>
+          <li>A Thousand Years <span>Christina Perri</span></li>
+          <li>Canon in D <span>Pachelbel</span></li>
+          <li>River Flows in You <span>Yiruma</span></li>
+          <li>Comptine d'un autre été <span>Yann Tiersen</span></li>
+          <li>Married Life <span>aus «Up»</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Ringtausch &amp; Auszug</h3>
+        <ul>
+          <li>Perfect <span>Ed Sheeran</span></li>
+          <li>Can't Help Falling in Love <span>Elvis Presley</span></li>
+          <li>All of Me <span>John Legend</span></li>
+          <li>Thinking Out Loud <span>Ed Sheeran</span></li>
+          <li>Make You Feel My Love <span>Adele</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Apéro &amp; Dinner</h3>
+        <ul>
+          <li>Fly Me to the Moon <span>Jazz-Standard</span></li>
+          <li>La Vie en Rose <span>Édith Piaf</span></li>
+          <li>Clair de Lune <span>Debussy</span></li>
+          <li>Golden Hour <span>JVKE</span></li>
+          <li>Nuvole Bianche <span>Einaudi</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="rep-note">Euer Lied ist nicht dabei? Ich studiere es neu ein. <em>Das erste Wunschlied ist im Paket Trauung inklusive</em>, wenn ihr es mir bis sechs Wochen vor dem Anlass nennt.</p>
+    </div>
+  </section>
+
+  <section id="referenzen" class="paper">
+    <div class="wrap">
+    <div class="sec-head">
+      <div><span class="label">Referenzen</span><h2>Gehört und gesehen.</h2></div>
+      <p>Kurze Ausschnitte von echten Anlässen. Die Videos kommen jeweils mit dem Einverständnis des Paares online.</p>
+    </div>
+    <div class="refs">
+      <figure class="ref">
+        <div class="vid" data-embed=""><button class="play" type="button" aria-label="Video abspielen">▶</button><span class="soon">Video folgt</span></div>
+        <figcaption><b>Trauung, Einzug</b><span>Zivile Trauung · Region Winterthur · September 2026</span></figcaption>
+      </figure>
+      <figure class="ref">
+        <div class="vid" data-embed=""><button class="play" type="button" aria-label="Video abspielen">▶</button><span class="soon">Video folgt</span></div>
+        <figcaption><b>Trauung, Auszug</b><span>Zivile Trauung · Region Winterthur · September 2026</span></figcaption>
+      </figure>
+      <figure class="ref">
+        <div class="vid" data-embed=""><button class="play" type="button" aria-label="Video abspielen">▶</button><span class="soon">Video folgt</span></div>
+        <figcaption><b>Repertoire, Studio</b><span>Hörprobe · A Thousand Years</span></figcaption>
+      </figure>
+    </div>
+    <blockquote class="quote">
+      <p>«Stimme des ersten Paares folgt. Zwei Sätze reichen, wenn sie echt sind.»</p>
+      <cite>Platzhalter · Bewertung nach der ersten Hochzeit</cite>
+    </blockquote>
+    </div>
+  </section>
+
+  <section id="ablauf">
+    <div class="wrap">
+    <div class="sec-head">
+      <div><span class="label">Ablauf</span><h2>So läuft es ab</h2></div>
+      <p>Vier Schritte, damit am Tag selbst nichts mehr zu klären ist.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Anfrage</h3><p>Ihr schickt mir Datum, Ort und eure Auswahl aus dem Konfigurator. Ich antworte innert 48 Stunden mit der Verfügbarkeit.</p></div>
+      <div class="step"><h3>Gespräch</h3><p>Kurzes Telefonat oder Videocall: Ablauf, Stimmung, Instrument vor Ort, eure Wunschlieder. Danach kommt die Offerte.</p></div>
+      <div class="step"><h3>Programm &amp; Anzahlung</h3><p>Mit der Anzahlung ist das Datum fix. Ich stelle das Programm zusammen und schicke euch kurze Hörproben der Wunschlieder.</p></div>
+      <div class="step"><h3>Der Tag</h3><p>Ich bin eine Stunde vorher da, spiele mich am Instrument ein und stimme mich mit Zeremonienleitung und Fotografie ab.</p></div>
+    </div>
+    </div>
+  </section>
+
+  <section id="ueber" class="paper">
+    <div class="wrap about">
+      <div class="portrait">Porträt · Foto folgt</div>
+      <div class="txt">
+        <span class="label">Über mich</span>
+        <h2>Seit 16 Jahren am Klavier, seit drei beruflich.</h2>
+        <p>Ich bin David, 21, aus Neftenbach bei Winterthur. Ich spiele seit meiner Kindheit und unterrichte seit drei Jahren selbstständig, <strong>ohne Notenblatt, mit modernen Songs</strong>. Genau so spiele ich auch an eurem Anlass: nah am Original, aber mit eigenem Arrangement.</p>
+        <p>Ich spiele nur auf einem Flügel oder Klavier vor Ort. Das ist eine bewusste Entscheidung: Ein Instrument mit echtem Klang gehört zu dem, was ihr an diesem Tag verdient.</p>
+        <div class="cross">
+          <span>Du möchtest selber lernen, wie das klingt? Ich unterrichte in Neftenbach und Umgebung.</span>
+          <a href="https://privatklavierunterricht.ch" target="_blank" rel="noopener">privatklavierunterricht.ch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap faq-grid">
+      <div><span class="label" style="display:block;margin-bottom:22px">Fragen</span><h2>Häufige Fragen</h2></div>
+      <div class="faq">
+        <details><summary>Braucht es ein Klavier vor Ort?</summary><p>Ja. Ich spiele ausschliesslich auf einem Flügel oder einem gestimmten Klavier, weil nur das so klingt, wie es an eurem Tag klingen soll. Die meisten Kirchen, Hotels und Locations haben eines. Falls nicht, organisiere ich mit euch die Miete über einen Klavierbauer aus der Region, die Kosten dafür gehen direkt an den Vermieter.</p></details>
+        <details><summary>Wie früh sollten wir buchen?</summary><p>Für Hochzeiten von Mai bis September am besten vier bis sechs Monate im Voraus. Kurzfristige Anfragen sind willkommen, dann hängt es von der Verfügbarkeit ab.</p></details>
+        <details><summary>Unser Lied ist nicht im Repertoire. Geht das trotzdem?</summary><p>Ja. Ich studiere Wunschlieder neu ein, das erste ist beim Paket Trauung inklusive, weitere kosten CHF 90 pro Lied. Damit ich es sauber vorbereiten kann, brauche ich die Titel bis sechs Wochen vor dem Anlass, danach kommt ein Express-Zuschlag von CHF 90 pro Lied dazu. Das gilt für einen normalen Song bis etwa vier Minuten. Ein längeres Klassikstück oder ein Medley offeriere ich separat. Ihr bekommt vorher immer eine kurze Hörprobe.</p></details>
+        <details><summary>Geht auch eine Outdoor-Trauung?</summary><p>Ja, wenn ein Klavier im Freien steht oder gemietet wird. Wir planen von Anfang an eine Schlechtwetter-Variante mit, denn ein Flügel lässt sich nicht kurzfristig umstellen.</p></details>
+        <details><summary>Wie sieht es mit Anfahrt und Wartezeit aus?</summary><p>Bis 30 km ab Winterthur ist die Anfahrt inklusive, 31 bis 60 km kosten pauschal CHF 80, darüber offeriere ich individuell. Eine Pause von bis zu 60 Minuten zwischen Trauung und Apéro (z.B. für Fotos) ist in den Kombi-Paketen enthalten, längere Pausen kosten CHF 80 pro Stunde.</p></details>
+        <details><summary>Wie bezahlen wir?</summary><p>30 % Anzahlung bei der Buchung per TWINT oder Rechnung, der Rest 14 Tage vor dem Anlass. Bei Absage bis 60 Tage vorher wird die Anzahlung zurückerstattet.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="anfrage" class="black">
+    <div class="wrap contact">
+      <div class="side">
+        <span class="label" style="color:var(--on-black-2)">Anfrage</span>
+        <h2>Erzählt mir von eurem Tag.</h2>
+        <p>Ich melde mich innert 48 Stunden mit der Verfügbarkeit und einem Vorschlag für ein kurzes Gespräch.</p>
+        <div class="direct">
+          <a id="k-mail" href="mailto:d.ramchandani@bluewin.ch">d.ramchandani@bluewin.ch</a>
+          <a id="k-tel" href="#" hidden></a>
+          <span style="color:var(--on-black-2)">Neftenbach ZH · unterwegs in der ganzen Deutschschweiz</span>
+        </div>
+      </div>
+      <div>
+        <form id="req-form">
+          <div class="row">
+            <div class="field"><label for="f-name">Name</label><input type="text" id="f-name" required autocomplete="name"></div>
+            <div class="field"><label for="f-email">E-Mail</label><input type="email" id="f-email" required autocomplete="email"></div>
+          </div>
+          <div class="row">
+            <div class="field"><label for="f-tel">Telefon <span class="opt">(optional)</span></label><input type="tel" id="f-tel" autocomplete="tel"></div>
+            <div class="field"><label for="f-datum">Datum des Anlasses</label><input type="date" id="f-datum"></div>
+          </div>
+          <div class="field"><label for="f-ort">Ort / Location</label><input type="text" id="f-ort" placeholder="z.B. Schloss Wülflingen, Winterthur"></div>
+          <div class="field"><label for="f-msg">Eure Auswahl und Wünsche</label><textarea id="f-msg"></textarea></div>
+          <div class="field" style="position:absolute;left:-9999px" aria-hidden="true"><label for="f-web">Website</label><input type="text" id="f-web" tabindex="-1" autocomplete="off"></div>
+          <button class="btn inv solid" type="submit" id="f-submit">Anfrage senden</button>
+          <p class="fine" id="f-error" hidden style="color:#E0A2AC;font-size:13px"></p>
+        </form>
+        <div class="thanks">
+          <h3>Danke, die Anfrage ist da.</h3>
+          <p>Ich melde mich innert 48 Stunden. Eine Bestätigung ist unterwegs an eure E-Mail-Adresse.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="inner">
+    <div>© 2026 David Ramchandani · Neftenbach ZH <span class="proto">Preview v0.6</span></div>
+    <div class="links">
+      <a href="https://privatklavierunterricht.ch" target="_blank" rel="noopener">Klavierunterricht</a>
+      <a href="#">Instagram</a>
+      <a href="#">Impressum</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ===== KONTAKT: hier anpassen =====
+   telefon: z.B. '+41 79 123 45 67'. Leer lassen = wird nicht angezeigt. */
+var KONTAKT = { email: 'd.ramchandani@bluewin.ch', telefon: '' };
+(function(){
+  var km=document.getElementById('k-mail'); km.href='mailto:'+KONTAKT.email; km.textContent=KONTAKT.email;
+  var kt=document.getElementById('k-tel');
+  if(KONTAKT.telefon){kt.href='tel:'+KONTAKT.telefon.replace(/[^+\d]/g,''); kt.textContent=KONTAKT.telefon; kt.hidden=false;}
+  /* ---------- Keyboard ---------- */
+  var kb=document.getElementById('keyboard');
+  var whites=21, startMidi=48; /* C3 */
+  var whiteSteps=[0,2,4,5,7,9,11], hasBlackAfter=[true,true,false,true,true,true,false];
+  var ctx=null;
+  function midiToHz(m){return 440*Math.pow(2,(m-69)/12);}
+  function play(midi){
+    try{
+      if(!ctx){ctx=new (window.AudioContext||window.webkitAudioContext)();}
+      if(ctx.state==='suspended'){ctx.resume();}
+      var t=ctx.currentTime, hz=midiToHz(midi);
+      var g=ctx.createGain(); g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(0.35,t+0.01); g.gain.exponentialRampToValueAtTime(0.0001,t+1.6);
+      g.connect(ctx.destination);
+      [[1,1],[2,0.35],[3,0.12],[4,0.05]].forEach(function(p){
+        var o=ctx.createOscillator(); o.type='sine'; o.frequency.value=hz*p[0];
+        var og=ctx.createGain(); og.gain.value=p[1]; o.connect(og); og.connect(g); o.start(t); o.stop(t+1.7);
+      });
+    }catch(e){}
+  }
+  function press(el,midi){
+    el.classList.add('down'); play(midi);
+    setTimeout(function(){el.classList.remove('down');},140);
+  }
+  for(var i=0;i<whites;i++){
+    var oct=Math.floor(i/7), deg=i%7, midi=startMidi+oct*12+whiteSteps[deg];
+    var w=document.createElement('button'); w.className='key white'; w.type='button'; w.setAttribute('aria-label','Taste '+midi); w.dataset.midi=midi;
+    kb.appendChild(w);
+  }
+  var pct=100/whites;
+  for(var j=0;j<whites-1;j++){
+    var d=j%7; if(!hasBlackAfter[d]) continue;
+    var o2=Math.floor(j/7), m2=startMidi+o2*12+whiteSteps[d]+1;
+    var b=document.createElement('button'); b.className='key black'; b.type='button'; b.setAttribute('aria-label','Taste '+m2); b.dataset.midi=m2;
+    b.style.left='calc(8px + (100% - 16px) * '+((j+1)/whites)+' - 1.45%)';
+    kb.appendChild(b);
+  }
+  kb.addEventListener('pointerdown',function(e){var k=e.target.closest('.key'); if(k){press(k,+k.dataset.midi);}});
+  kb.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){var k=e.target.closest('.key'); if(k){e.preventDefault();press(k,+k.dataset.midi);}}});
+
+  /* ---------- Configurator ---------- */
+  var anlass=document.getElementById('anlass');
+  var mods={trauung:document.getElementById('m-trauung'),apero:document.getElementById('m-apero'),dinner:document.getElementById('m-dinner')};
+  var modLabel={trauung:'Trauung (bis 60 Min.)',apero:'Apéro (90 Min.)',dinner:'Dinner (2 Std.)'};
+  var extOut=document.getElementById('ext-out'), songsOut=document.getElementById('songs-out');
+  var datum=document.getElementById('datum');
+  var totalEl=document.getElementById('total'), linesEl=document.getElementById('lines');
+  var chipTrauung=document.querySelector('[data-only="hochzeit"]');
+  var state={ext:0,songs:1,pause:2}; /* pause in 30-Min-Schritten, 2 = 60 Min. */
+  var pauseOut=document.getElementById('pause-out'), pauseRow=document.getElementById('pause-row');
+  var fmt=function(n){return n.toLocaleString('de-CH');};
+
+  function inclSongs(){
+    var n=0; if(mods.trauung.checked) n=1;
+    if(mods.trauung.checked&&mods.apero.checked&&mods.dinner.checked) n=2;
+    return n;
+  }
+  function calc(){
+    var lines=[], sum=0;
+    var chosen=Object.keys(mods).filter(function(k){return mods[k].checked&&!mods[k].disabled;});
+    if(!chosen.length){lines.push({n:'Noch kein Baustein gewählt',v:'',cls:'empty'});}
+    chosen.forEach(function(k){var p=+mods[k].value; sum+=p; lines.push({n:modLabel[k],v:fmt(p)});});
+    if(chosen.length>1){var d=(chosen.length-1)*100; sum-=d; lines.push({n:'Kombi-Vorteil',v:'− '+fmt(d),cls:'discount'});}
+    pauseRow.hidden=chosen.length<2;
+    if(chosen.length>1){
+      var pMin=state.pause*30, pExtra=Math.max(0,state.pause-2)*40;
+      if(pExtra>0){sum+=pExtra; lines.push({n:'Pause '+pMin+' Min. (60 inkl.)',v:fmt(pExtra)});}
+      else{lines.push({n:'Pause '+pMin+' Min.',v:'inkl.'});}
+    }
+    if(state.ext>0){var e=state.ext*100; sum+=e; lines.push({n:'Verlängerung '+(state.ext*30)+' Min.',v:fmt(e)});}
+    var incl=inclSongs(), extra=Math.max(0,state.songs-incl);
+    if(state.songs>0){
+      if(extra>0){var s=extra*90; sum+=s; lines.push({n:'Wunschlieder neu einstudiert: '+state.songs+' ('+incl+' inkl.)',v:fmt(s)});}
+      else{lines.push({n:'Wunschlieder neu einstudiert: '+state.songs,v:'inkl.'});}
+    }
+    var zone=document.querySelector('input[name="zone"]:checked').value, onRequest=false;
+    if(zone==='request'){onRequest=true; lines.push({n:'Anfahrt über 60 km',v:'auf Anfrage'});}
+    else if(+zone>0){sum+=+zone; lines.push({n:'Anfahrt 31 bis 60 km (Pauschale)',v:fmt(+zone)});}
+    else if(chosen.length){lines.push({n:'Anfahrt bis 30 km',v:'inkl.'});}
+    if(state.songs>0&&datum.value){
+      var days=Math.floor((new Date(datum.value+'T12:00:00')-new Date())/864e5);
+      if(days>=0&&days<42){var ex=state.songs*90; sum+=ex; lines.push({n:'Express-Zuschlag Wunschlieder, Anlass in '+days+' Tagen (unter 6 Wochen)',v:fmt(ex),cls:'express'});}
+    }
+    totalEl.textContent=(onRequest?'ab ':'')+fmt(sum);
+    linesEl.innerHTML=lines.map(function(l){return '<div class="line'+(l.cls?' '+l.cls:'')+'"><span class="n">'+l.n+'</span><span class="v">'+l.v+'</span></div>';}).join('');
+    document.getElementById('songs-help').textContent = incl>0
+      ? 'Lieder aus dem Repertoire sind immer inklusive. Neue Stücke: '+incl+' inklusive, dann CHF 90 pro Lied. Gemeldet bis 6 Wochen vor dem Anlass, danach Express-Zuschlag CHF 90 pro Lied.'
+      : 'Lieder aus dem Repertoire sind immer inklusive. Neue Stücke: CHF 90 pro Lied. Gemeldet bis 6 Wochen vor dem Anlass, danach Express-Zuschlag CHF 90 pro Lied.';
+    return {sum:sum,chosen:chosen,lines:lines};
+  }
+  function applyAnlass(){
+    var wedding=anlass.value==='hochzeit';
+    chipTrauung.style.display=wedding?'':'none';
+    mods.trauung.disabled=!wedding;
+    if(!wedding&&!mods.apero.checked&&!mods.dinner.checked){ (anlass.value==='dinner'?mods.dinner:mods.apero).checked=true; }
+    calc();
+  }
+  anlass.addEventListener('change',applyAnlass);
+  Object.keys(mods).forEach(function(k){mods[k].addEventListener('change',calc);});
+  document.querySelectorAll('input[name="zone"]').forEach(function(r){r.addEventListener('change',calc);});
+  datum.addEventListener('change',calc);
+  function stepper(id,key,out,min,max){
+    document.getElementById(id).addEventListener('click',function(e){
+      var b=e.target.closest('button'); if(!b) return;
+      state[key]=Math.min(max,Math.max(min,state[key]+(+b.dataset.d))); out.textContent=state[key]; calc();
+    });
+  }
+  stepper('ext','ext',extOut,0,8);
+  stepper('songs','songs',songsOut,0,10);
+  document.getElementById('pause').addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b) return;
+    state.pause=Math.min(8,Math.max(0,state.pause+(+b.dataset.d))); pauseOut.textContent=(state.pause*30)+' Min.'; calc();
+  });
+
+  /* presets from package cards */
+  var presets={
+    'trauung':{anlass:'hochzeit',t:true,a:false,d:false,songs:1},
+    'trauung-apero':{anlass:'hochzeit',t:true,a:true,d:false,songs:1},
+    'ganzer-tag':{anlass:'hochzeit',t:true,a:true,d:true,songs:2},
+    'firma':{anlass:'firma',t:false,a:false,d:true,songs:0}
+  };
+  document.querySelectorAll('[data-preset]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var p=presets[btn.dataset.preset]; anlass.value=p.anlass;
+      mods.trauung.checked=p.t; mods.apero.checked=p.a; mods.dinner.checked=p.d;
+      state.songs=p.songs; songsOut.textContent=p.songs; state.ext=0; extOut.textContent=0; state.pause=2; pauseOut.textContent='60 Min.'; document.getElementById('z-1').checked=true;
+      applyAnlass();
+      document.getElementById('konfigurator').scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  });
+
+  /* hand over to request form */
+  document.getElementById('to-request').addEventListener('click',function(){
+    var r=calc(); var anlassTxt=anlass.options[anlass.selectedIndex].text;
+    var txt='Anlass: '+anlassTxt+'\n'+r.lines.filter(function(l){return !l.cls||l.cls!=='empty';}).map(function(l){return '· '+l.n+(l.v?' ('+l.v+')':'');}).join('\n')+'\nRichtpreis: CHF '+totalEl.textContent+'\n\nUnsere Wunschlieder:\n';
+    document.getElementById('f-msg').value=txt;
+    if(datum.value){document.getElementById('f-datum').value=datum.value;}
+  });
+  var lastCfg=null;
+  document.getElementById('to-request').addEventListener('click',function(){
+    var r=calc(); lastCfg={anlass:anlass.options[anlass.selectedIndex].text,richtpreis:totalEl.textContent,positionen:r.lines.filter(function(l){return l.cls!=='empty';}).map(function(l){return {n:l.n,v:l.v};})};
+  });
+  var form=document.getElementById('req-form'), errEl=document.getElementById('f-error'), submitBtn=document.getElementById('f-submit');
+  form.addEventListener('submit',function(e){
+    e.preventDefault(); errEl.hidden=true; submitBtn.disabled=true; submitBtn.textContent='Wird gesendet…';
+    var payload={name:document.getElementById('f-name').value.trim(),email:document.getElementById('f-email').value.trim(),telefon:document.getElementById('f-tel').value.trim(),datum:document.getElementById('f-datum').value,ort:document.getElementById('f-ort').value.trim(),nachricht:document.getElementById('f-msg').value.trim(),website:document.getElementById('f-web').value,konfiguration:lastCfg};
+    fetch('/api/anfrage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+      .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
+      .then(function(x){
+        if(!x.ok) throw new Error(x.j&&x.j.error||'Senden fehlgeschlagen');
+        form.classList.add('sent'); form.nextElementSibling.scrollIntoView({behavior:'smooth',block:'center'});
+      })
+      .catch(function(err){errEl.textContent='Das hat nicht geklappt: '+err.message+' Schreibt mir direkt per E-Mail, die Adresse steht links.'; errEl.hidden=false;})
+      .then(function(){submitBtn.disabled=false; submitBtn.textContent='Anfrage senden';});
+  });
+  /* Referenz-Videos: data-embed mit YouTube/Vimeo-Embed-URL fuellen, dann spielt der Klick das Video */
+  document.querySelectorAll('.ref .vid').forEach(function(v){
+    v.querySelector('.play').addEventListener('click',function(){
+      var src=v.dataset.embed; if(!src) return;
+      var f=document.createElement('iframe'); f.src=src+(src.indexOf('?')>-1?'&':'?')+'autoplay=1'; f.allow='autoplay; fullscreen; picture-in-picture'; f.setAttribute('allowfullscreen','');
+      v.innerHTML=''; v.appendChild(f);
+    });
+  });
+
+  applyAnlass();
+})();
+</script>
+</body></html>
