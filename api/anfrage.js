@@ -7,7 +7,7 @@
 //   SUPABASE_URL               https://vglqsuzfzsasfuavticq.supabase.co
 //   SUPABASE_SERVICE_ROLE_KEY  Service-Role-Key (Supabase > Settings > API)
 //   NOTIFY_EMAIL               optional, Standard d.ramchandani@bluewin.ch
-//   FROM_EMAIL                 optional, Standard "David Ramchandani <pianist@privatklavierunterricht.ch>"
+//   FROM_EMAIL                 Pflicht, z.B. "David Ramchandani <hallo@deineventpianist.ch>" (Domain bei Resend verifiziert)
 
 const MAX = 4000;
 
@@ -50,8 +50,8 @@ module.exports = async function handler(req, res) {
 
   const { RESEND_API_KEY, SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY } = process.env;
   const NOTIFY_EMAIL = process.env.NOTIFY_EMAIL || 'd.ramchandani@bluewin.ch';
-  const FROM_EMAIL = process.env.FROM_EMAIL || 'David Ramchandani <pianist@privatklavierunterricht.ch>';
-  if (!RESEND_API_KEY) {
+  const FROM_EMAIL = process.env.FROM_EMAIL; // z.B. "David Ramchandani <hallo@deineventpianist.ch>", Domain muss bei Resend verifiziert sein
+  if (!RESEND_API_KEY || !FROM_EMAIL) {
     return res.status(500).json({ error: 'Der Mailversand ist noch nicht konfiguriert.' });
   }
 
@@ -114,6 +114,7 @@ module.exports = async function handler(req, res) {
   const mailAnPaar = {
     from: FROM_EMAIL,
     to: [email],
+    reply_to: NOTIFY_EMAIL,
     subject: 'Eure Anfrage ist angekommen',
     html: wrap(`
       <p>Hallo ${esc(name)}</p>
