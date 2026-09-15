@@ -3,3 +3,6 @@ node_modules/
 .env
 .env.local
 .DS_Store
+
+# Rohvideos (zu gross fuer Git), komprimierte Versionen liegen in videos/
+Videos/

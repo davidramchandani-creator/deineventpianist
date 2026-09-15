@@ -192,20 +192,27 @@
   @media (max-width:800px){.rep{grid-template-columns:1fr}.rep > div{padding:24px 0}.rep > div + div{padding-left:0}}
 
   /* referenzen */
-  .refs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .ref{margin:0}
-  .ref .vid{position:relative;aspect-ratio:16/9;max-width:100%;background:#0A0A0A;display:grid;place-items:center;overflow:hidden}
-  .ref .vid iframe,.ref .vid video{position:absolute;inset:0;width:100%;height:100%;border:0}
-  .ref .play{width:64px;height:64px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:transparent;color:#fff;cursor:pointer;display:grid;place-items:center;font-size:18px;transition:background .2s,border-color .2s}
-  .ref .play:hover{background:#fff;color:#0A0A0A;border-color:#fff}
-  .ref .vid .soon{position:absolute;left:18px;bottom:16px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-black-2)}
-  .ref figcaption{padding-top:16px;display:grid;gap:4px}
-  .ref figcaption b{font-family:var(--display);font-size:24px;font-weight:400;line-height:1.1}
-  .ref figcaption span{font-size:12.5px;color:var(--grey);letter-spacing:.04em}
+  .refs-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+  .refs-nav{display:flex;gap:8px;flex-shrink:0}
+  .refs-nav button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line2);background:transparent;color:var(--black);cursor:pointer;font-size:16px;display:grid;place-items:center;transition:background .2s,color .2s,border-color .2s}
+  .refs-nav button:hover{background:var(--black);color:#fff;border-color:var(--black)}
+  .refs{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 16px 16px;margin:0 -16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .refs::-webkit-scrollbar{display:none}
+  .ref{margin:0;flex:0 0 clamp(220px,22vw,290px);scroll-snap-align:start}
+  .ref .vid{position:relative;aspect-ratio:9/16;background:#0A0A0A;overflow:hidden;cursor:pointer}
+  .ref .vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:#0A0A0A}
+  .ref .vid .tag{position:absolute;left:14px;top:14px;z-index:2;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:6px 10px;background:rgba(10,10,10,.72);color:#fff;backdrop-filter:blur(6px);pointer-events:none}
+  .ref .vid .tag.live{background:var(--accent)}
+  .ref .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;width:64px;height:64px;border-radius:50%;border:1px solid rgba(255,255,255,.6);background:rgba(10,10,10,.35);color:#fff;cursor:pointer;display:grid;place-items:center;font-size:18px;padding-left:4px;transition:background .2s,border-color .2s,color .2s;backdrop-filter:blur(4px)}
+  .ref .vid:hover .play{background:#fff;color:#0A0A0A;border-color:#fff}
+  .ref .vid.playing .play,.ref .vid.playing .tag{display:none}
+  .ref figcaption{padding-top:14px;display:grid;gap:4px}
+  .ref figcaption b{font-family:var(--display);font-size:22px;font-weight:400;line-height:1.1}
+  .ref figcaption span{font-size:12.5px;color:var(--grey);letter-spacing:.04em;line-height:1.4}
   .quote{margin:72px auto 0;max-width:38ch;text-align:center}
   .quote p{font-family:var(--display);font-size:clamp(28px,3.4vw,42px);line-height:1.15;color:var(--black)}
   .quote cite{display:block;margin-top:18px;font-style:normal;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
-  @media (max-width:800px){.refs{grid-template-columns:1fr}}
+  @media (max-width:800px){.refs-nav{display:none}.ref{flex-basis:min(72vw,300px)}}
 
   /* process */
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;counter-reset:step}
@@ -532,22 +539,13 @@
     <div class="wrap">
     <div class="sec-head">
       <div><span class="label">Referenzen</span><h2>Gehört und gesehen.</h2></div>
-      <p>Kurze Ausschnitte von echten Anlässen. Die Videos kommen jeweils mit dem Einverständnis des Paares online.</p>
+      <p>Kurze Ausschnitte von echten Anlässen und Hörproben aus dem Übungsraum. Videos von Veranstaltungen kommen nur mit dem Einverständnis des Paares online.</p>
     </div>
-    <div class="refs">
-      <figure class="ref">
-        <div class="vid" data-embed=""><button class="play" type="button" aria-label="Video abspielen">▶</button><span class="soon">Video folgt</span></div>
-        <figcaption><b>Trauung, Einzug</b><span>Zivile Trauung · Region Winterthur · September 2026</span></figcaption>
-      </figure>
-      <figure class="ref">
-        <div class="vid" data-embed=""><button class="play" type="button" aria-label="Video abspielen">▶</button><span class="soon">Video folgt</span></div>
-        <figcaption><b>Trauung, Auszug</b><span>Zivile Trauung · Region Winterthur · September 2026</span></figcaption>
-      </figure>
-      <figure class="ref">
-        <div class="vid" data-embed=""><button class="play" type="button" aria-label="Video abspielen">▶</button><span class="soon">Video folgt</span></div>
-        <figcaption><b>Repertoire, Studio</b><span>Hörprobe · A Thousand Years</span></figcaption>
-      </figure>
+    <div class="refs-head">
+      <p class="label">Hochkant gefilmt, mit Ton am besten</p>
+      <div class="refs-nav"><button type="button" data-dir="-1" aria-label="Zurück">&#8592;</button><button type="button" data-dir="1" aria-label="Weiter">&#8594;</button></div>
     </div>
+    <div class="refs" id="refs"></div>
     <blockquote class="quote">
       <p>«Stimme des ersten Paares folgt. Zwei Sätze reichen, wenn sie echt sind.»</p>
       <cite>Platzhalter · Bewertung nach der ersten Hochzeit</cite>
@@ -653,6 +651,21 @@
 /* ===== KONTAKT: hier anpassen =====
    telefon: z.B. '+41 79 123 45 67'. Leer lassen = wird nicht angezeigt. */
 var KONTAKT = { email: 'd.ramchandani@bluewin.ch', telefon: '' };
+
+/* ===== VIDEOS: hier anpassen =====
+   datei: Name in /media (ohne Endung, es braucht .mp4 und .jpg)
+   art:   'anlass' = echte Veranstaltung (roter Tag) | 'probe' = Hörprobe (grauer Tag)
+   titel: grosse Zeile, text: kleine Zeile darunter. Reihenfolge = Reihenfolge auf der Seite. */
+var VIDEOS = [
+  { datei: 'hochzeit-1', art: 'anlass', titel: 'Trauung im Freien', text: 'Zivile Trauung · Region Winterthur · 2026' },
+  { datei: 'hochzeit-2', art: 'anlass', titel: 'Einzug der Braut', text: 'Zivile Trauung · Region Winterthur · 2026' },
+  { datei: 'hochzeit-3', art: 'anlass', titel: 'Musik zur Zeremonie', text: 'Zivile Trauung · Region Winterthur · 2026' },
+  { datei: 'hoerprobe-1', art: 'probe', titel: 'Hörprobe 1', text: 'Stück folgt' },
+  { datei: 'hoerprobe-2', art: 'probe', titel: 'Hörprobe 2', text: 'Stück folgt' },
+  { datei: 'hoerprobe-3', art: 'probe', titel: 'Hörprobe 3', text: 'Stück folgt' },
+  { datei: 'hoerprobe-4', art: 'probe', titel: 'Hörprobe 4', text: 'Stück folgt' },
+  { datei: 'hoerprobe-5', art: 'probe', titel: 'Hörprobe 5', text: 'Stück folgt' }
+];
 (function(){
   var km=document.getElementById('k-mail'); km.href='mailto:'+KONTAKT.email; km.textContent=KONTAKT.email;
   var kt=document.getElementById('k-tel');
@@ -811,12 +824,31 @@ var KONTAKT = { email: 'd.ramchandani@bluewin.ch', telefon: '' };
       .catch(function(err){errEl.textContent='Das hat nicht geklappt: '+err.message+' Schreibt mir direkt per E-Mail, die Adresse steht links.'; errEl.hidden=false;})
       .then(function(){submitBtn.disabled=false; submitBtn.textContent='Anfrage senden';});
   });
-  /* Referenz-Videos: data-embed mit YouTube/Vimeo-Embed-URL fuellen, dann spielt der Klick das Video */
-  document.querySelectorAll('.ref .vid').forEach(function(v){
-    v.querySelector('.play').addEventListener('click',function(){
-      var src=v.dataset.embed; if(!src) return;
-      var f=document.createElement('iframe'); f.src=src+(src.indexOf('?')>-1?'&':'?')+'autoplay=1'; f.allow='autoplay; fullscreen; picture-in-picture'; f.setAttribute('allowfullscreen','');
-      v.innerHTML=''; v.appendChild(f);
+  /* Referenz-Videos aus VIDEOS rendern */
+  var refs=document.getElementById('refs');
+  function escH(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  refs.innerHTML=VIDEOS.map(function(v){
+    var live=v.art==='anlass';
+    return '<figure class="ref"><div class="vid">'+
+      '<span class="tag'+(live?' live':'')+'">'+(live?'Echter Anlass':'Hörprobe')+'</span>'+
+      '<video preload="none" playsinline poster="media/'+v.datei+'.jpg" src="media/'+v.datei+'.mp4"></video>'+
+      '<button class="play" type="button" aria-label="Video abspielen">&#9654;</button>'+
+      '</div><figcaption><b>'+escH(v.titel)+'</b><span>'+escH(v.text)+'</span></figcaption></figure>';
+  }).join('');
+  var vids=[].slice.call(refs.querySelectorAll('video'));
+  refs.querySelectorAll('.vid').forEach(function(box){
+    var vid=box.querySelector('video');
+    box.addEventListener('click',function(){
+      if(box.classList.contains('playing')) return;
+      vids.forEach(function(o){ if(o!==vid){o.pause(); o.controls=false; o.parentNode.classList.remove('playing');} });
+      vid.controls=true; box.classList.add('playing'); vid.play();
+    });
+    vid.addEventListener('ended',function(){ vid.controls=false; box.classList.remove('playing'); vid.load(); });
+  });
+  document.querySelectorAll('.refs-nav button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var card=refs.querySelector('.ref'); var w=card?card.getBoundingClientRect().width+20:300;
+      refs.scrollBy({left:w*2*Number(b.dataset.dir),behavior:'smooth'});
     });
   });
 
