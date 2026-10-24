@@ -192,6 +192,15 @@
   .rep-note em{color:#D7A0AA}
   @media (max-width:800px){.rep{grid-template-columns:1fr}.rep > div{padding:24px 0}.rep > div + div{padding-left:0}}
   @media (max-width:520px){.rep li{flex-direction:column;align-items:flex-start;gap:4px;font-size:24px}.rep li span{white-space:normal}}
+  .rep li{position:relative}
+  .rep li .ti{display:flex;align-items:center;gap:14px;min-width:0}
+  .rep li::after{content:"";position:absolute;left:0;bottom:-1px;height:1px;width:var(--p,0%);background:var(--on-black)}
+  .pl{display:inline-grid;place-items:center;vertical-align:middle;width:32px;height:32px;flex-shrink:0;margin:0;padding:0;border-radius:50%;border:1px solid rgba(255,255,255,.38);background:transparent;color:var(--on-black);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+  .pl::before{content:"";border-left:9px solid currentColor;border-top:6px solid transparent;border-bottom:6px solid transparent;margin-left:3px}
+  .pl:hover,.pl[aria-pressed="true"]{background:var(--on-black);color:var(--black);border-color:var(--on-black)}
+  .pl[aria-pressed="true"]::before{border:0;width:10px;height:12px;margin:0;background:linear-gradient(to right,currentColor 0 3px,transparent 3px 7px,currentColor 7px 10px)}
+  .pl:focus-visible{outline:2px solid #D7A0AA;outline-offset:3px}
+  .rep-hint{margin:22px 0 0;max-width:62ch;font-size:12.5px;line-height:1.6;color:var(--on-black-2)}
 
   /* referenzen */
   .refs-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
@@ -505,31 +514,31 @@
       <div>
         <h3>Klavierstücke</h3>
         <ul>
-          <li>Nuvole Bianche <span>Ludovico Einaudi</span></li>
-          <li>Divenire <span>Ludovico Einaudi</span></li>
-          <li>Comptine d'un autre été <span>Yann Tiersen</span></li>
-          <li>River Flows in You <span>Yiruma</span></li>
-          <li>Idea 10 <span>Gibran Alcocer</span></li>
-          <li>Decisions <span>Patrik Pietschmann</span></li>
+          <li><div class="ti">Nuvole Bianche<button class="pl" type="button" data-src="audio/nuvole-bianche.mp3" aria-label="Ausschnitt anhören: Nuvole Bianche" aria-pressed="false"></button></div><span>Ludovico Einaudi</span></li>
+          <li><div class="ti">Divenire<button class="pl" type="button" data-src="audio/divenire.mp3" aria-label="Ausschnitt anhören: Divenire" aria-pressed="false"></button></div><span>Ludovico Einaudi</span></li>
+          <li><div class="ti">Comptine d'un autre été<button class="pl" type="button" data-src="audio/comptine.mp3" aria-label="Ausschnitt anhören: Comptine d'un autre été" aria-pressed="false"></button></div><span>Yann Tiersen</span></li>
+          <li><div class="ti">River Flows in You<button class="pl" type="button" data-src="audio/river-flows-in-you.mp3" aria-label="Ausschnitt anhören: River Flows in You" aria-pressed="false"></button></div><span>Yiruma</span></li>
+          <li><div class="ti">Idea 10<button class="pl" type="button" data-src="audio/idea-10.mp3" aria-label="Ausschnitt anhören: Idea 10" aria-pressed="false"></button></div><span>Gibran Alcocer</span></li>
+          <li><div class="ti">Decisions<button class="pl" type="button" data-src="audio/decisions.mp3" aria-label="Ausschnitt anhören: Decisions" aria-pressed="false"></button></div><span>Patrik Pietschmann</span></li>
         </ul>
       </div>
       <div>
         <h3>Songs</h3>
         <ul>
-          <li>Ordinary <span>Alex Warren</span></li>
+          <li><div class="ti">Ordinary<button class="pl" type="button" data-src="audio/ordinary.mp3" aria-label="Ausschnitt anhören: Ordinary" aria-pressed="false"></button></div><span>Alex Warren</span></li>
           <li>Stay With Me <span>Sam Smith</span></li>
           <li>Say Something <span>Justin Timberlake</span></li>
-          <li>Here Comes the Sun <span>The Beatles</span></li>
+          <li><div class="ti">Here Comes the Sun<button class="pl" type="button" data-src="audio/here-comes-the-sun.mp3" aria-label="Ausschnitt anhören: Here Comes the Sun" aria-pressed="false"></button></div><span>The Beatles</span></li>
           <li>Dandelions <span>Ruth B.</span></li>
           <li>The Night We Met <span>Lord Huron</span></li>
-          <li>I Wanted to Leave <span>SYML</span></li>
-          <li>Je te laisserai des mots <span>Patrick Watson</span></li>
+          <li><div class="ti">I Wanted to Leave<button class="pl" type="button" data-src="audio/i-wanted-to-leave.mp3" aria-label="Ausschnitt anhören: I Wanted to Leave" aria-pressed="false"></button></div><span>SYML</span></li>
+          <li><div class="ti">Je te laisserai des mots<button class="pl" type="button" data-src="audio/je-te-laisserai-des-mots.mp3" aria-label="Ausschnitt anhören: Je te laisserai des mots" aria-pressed="false"></button></div><span>Patrick Watson</span></li>
         </ul>
       </div>
       <div>
         <h3>Moderne Arrangements</h3>
         <ul>
-          <li>Innerbloom <span>RÜFÜS DU SOL</span></li>
+          <li><div class="ti">Innerbloom<button class="pl" type="button" data-src="audio/innerbloom.mp3" aria-label="Ausschnitt anhören: Innerbloom" aria-pressed="false"></button></div><span>RÜFÜS DU SOL</span></li>
           <li>Children <span>Robert Miles</span></li>
           <li>Congratulations (Intro) <span>Mac Miller</span></li>
           <li>Robbery (Piano Arrangement) <span>Juice WRLD</span></li>
@@ -537,6 +546,7 @@
         </ul>
       </div>
     </div>
+    <p class="rep-hint">Mit dem Play-Knopf hört ihr einen Ausschnitt von etwa einer Minute, damit ihr die Stücke kennenlernt. Mein eigenes Spiel hört ihr bei den Referenzen.</p>
     <p class="rep-note">Euer Lied ist nicht dabei? Ich studiere es neu ein. <em>Das erste Wunschlied ist im Paket Trauung inklusive</em>, wenn ihr es mir bis sechs Wochen vor dem Anlass nennt.</p>
     </div>
   </section>
@@ -847,7 +857,7 @@ var VIDEOS = [
     box.addEventListener('click',function(){
       if(box.classList.contains('playing')) return;
       vids.forEach(function(o){ if(o!==vid){o.pause(); o.controls=false; o.parentNode.classList.remove('playing');} });
-      vid.controls=true; box.classList.add('playing'); vid.play();
+      stopAudio(); vid.controls=true; box.classList.add('playing'); vid.play();
     });
     vid.addEventListener('ended',function(){ vid.controls=false; box.classList.remove('playing'); vid.load(); });
   });
@@ -855,6 +865,22 @@ var VIDEOS = [
     b.addEventListener('click',function(){
       var card=refs.querySelector('.ref'); var w=card?card.getBoundingClientRect().width+20:300;
       refs.scrollBy({left:w*2*Number(b.dataset.dir),behavior:'smooth'});
+    });
+  });
+
+  /* Repertoire: Ausschnitte abspielen, immer nur einer gleichzeitig */
+  var aud=new Audio(); aud.preload='none'; var curBtn=null;
+  function resetBtn(){ if(curBtn){ curBtn.setAttribute('aria-pressed','false'); curBtn.closest('li').style.removeProperty('--p'); curBtn=null; } }
+  function stopAudio(){ aud.pause(); resetBtn(); }
+  aud.addEventListener('timeupdate',function(){ if(curBtn && aud.duration){ curBtn.closest('li').style.setProperty('--p',(aud.currentTime/aud.duration*100)+'%'); } });
+  aud.addEventListener('ended',resetBtn);
+  document.querySelectorAll('.rep .pl').forEach(function(b){
+    b.addEventListener('click',function(){
+      if(curBtn===b){ stopAudio(); return; }
+      stopAudio();
+      vids.forEach(function(o){ o.pause(); o.controls=false; o.parentNode.classList.remove('playing'); });
+      aud.src=b.dataset.src; curBtn=b; b.setAttribute('aria-pressed','true');
+      var pr=aud.play(); if(pr&&pr.catch){ pr.catch(function(){ resetBtn(); }); }
     });
   });
 
