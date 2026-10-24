@@ -234,7 +234,8 @@
 
   /* about */
   .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:center}
-  .portrait{aspect-ratio:4/5;max-width:440px;background:var(--paper2);display:grid;place-items:end start;padding:20px;color:var(--grey);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+  .portrait{aspect-ratio:4/5;max-width:440px;background:var(--paper2);overflow:hidden}
+  .portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 20%;mix-blend-mode:multiply}
   .about .txt{display:grid;gap:24px}
   .about .txt p{max-width:54ch;color:var(--grey);font-size:17px;line-height:1.7}
   .about .txt p strong{color:var(--black);font-weight:500}
@@ -584,7 +585,7 @@
 
   <section id="ueber" class="paper">
     <div class="wrap about">
-      <div class="portrait">Porträt · Foto folgt</div>
+      <div class="portrait"><img src="media/portrait.jpg" width="610" height="762" alt="David Ramchandani, Pianist" loading="lazy"></div>
       <div class="txt">
         <span class="label">Über mich</span>
         <h2>Seit 16 Jahren am Klavier, seit drei beruflich.</h2>
